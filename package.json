@@ -3,5 +3,18 @@
   "version": "1.0.0",
   "main": "index.js",
   "author": "Jacky Efendi <jacky.efendi1@gmail.com>",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
+    "express": "^4.16.2",
+    "jest": "^22.1.4"
+  },
+  "scripts": {
+    "build": "yarn run build-server && yarn run build-client",
+    "build-server": "babel src/server --out-dir ./dist",
+    "build-client": "babel src/client --copy-files --out-dir ./dist/public",
+    "start": "yarn run build && node ./dist/index.js",
+    "test": "jest ./src"
+  }
 }
