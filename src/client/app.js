@@ -6,5 +6,3 @@ export default class App extends React.Component {
     return <div>React boilerplate!</div>;
   }
 }
-
-ReactDOM.render(<App/>, document.getElementById('root'));
